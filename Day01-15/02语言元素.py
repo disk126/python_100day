@@ -119,6 +119,7 @@ Version: 0.1
 Author:  喻先明
 Date: 2019-07-24
 """
+"""
 a = 100
 b = 12.34
 c = 1 + 5j
@@ -129,9 +130,10 @@ print(type(b))
 print(type(c))
 print(type(d))
 print(type(e))
+"""
 
+# 数据类型转换
 
-#数据类型转换
 """
 在对变量类型进行转换时可以使用Python的内置函数（准确的说下面列出的并不是真正意义上的函数，
 而是后面我们要讲到的创建对象的构造方法）
@@ -143,7 +145,7 @@ chr()：将整数转换成该编码对应的字符串（一个字符）。
 ord()：将字符串（一个字符）转换成对应的编码（整数）。
 """
 
-#运算符
+# 运算符
 """
 Python支持多种运算符，下表大致按照优先级从高到低的顺序列出了所有的运算符，我们会陆续使用到它们。
 
@@ -165,5 +167,97 @@ not or and	逻辑运算符
 
 说明： 在实际开发中，如果搞不清楚运算符的优先级，可以使用括号来确保运算的执行顺序。
 """
-#运算符的使用
+# 运算符的使用
+
+"""
+运算符的使用
+
+Version: 0.1
+Author: 喻先明
+"""
+"""
+#实例1
+a = 5
+b = 10
+c = 3
+d = 4
+e = 5
+a += b  # a=a+b 15
+a -= c  # a=a-c 12
+a *= d  # a=a*d 48
+a /= e  # a=a/e 9.6
+print("a=", a)  # a的值为9.6
+"""
+
+"""
+实例2
+
+flag1 = 3 > 2
+flag2 = 2 < 1
+flag3 = flag1 and flag2
+flag4 = flag1 or flag2
+flag5 = not flag1
+print("flag1:", flag1)  # True
+print("flag2:", flag2)  # Flase
+print("flag3:", flag3)  # Flase
+print("flag4:", flag4)  # True
+print("flag5:", flag5)  # Flase
+print(flag1 is True)  # True
+print(flag2 is not False)  # Flase
+"""
+
+# 练习题
+
+"""
+将华氏温度转换为摄氏温度
+F = 1.8C + 32
+
+Version: 0.1
+Author: 喻先明
+
+f=float(input("华氏温度>:"))
+c=(f-32)/1.8
+print("%.1f华氏温度=%.1f摄氏温度"%(f,c))
+
+输出结果：
+华氏温度>:100
+100.0华氏温度=37.8摄氏温度
+
+"""
+
+"""
+输入半径计算圆的周长和面积
+周长=圆周率×半径×2
+面积=圆周率×半径×半径
+Version: 0.1
+Author: 喻先明
+
+import math
+
+radius = float(input("请输入圆的半径>:"))
+perimeter = (math.pi * radius * 2)
+area = math.pi * radius * radius
+print("周长:%.2f" % perimeter)
+print("面积:%.2f" % area)
+
+#输出结果：
+请输入圆的半径: 10
+周长: 62.83
+面积: 314.16
+"""
+"""
+1.能被4整除而不能被100整除。
+2.能被100整除也能被400整除
+
+a = int(input("请输入年份>:"))
+b = (a % 4 == 0 and a % 100 != 0) or (a % 100 == 0 and a % 400 == 0)
+print(b)   #True 代表是闰年  Flase 代表不是闰年
+
+#输出结果：
+请输入年份>:2000
+True
+
+请输入年份>:1987
+False
+"""
 
