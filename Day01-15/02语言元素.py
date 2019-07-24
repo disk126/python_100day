@@ -82,4 +82,9 @@ a=321
 b=123
 print(a+b)
 
+c=a+b
+print(c)
+
+
+
 
