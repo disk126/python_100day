@@ -192,3 +192,53 @@ else:
 """
 
 
+
+#练习5：个人所得税计算器
+
+"""
+输入月收入和五险一金计算个人所得税
+
+salary:工资
+insurance:保险
+diff:起征额
+
+a:税率
+b=扣除数
+
+个人所得税:起征额*税率-扣除数
+实际工资=工资-保险-个人所得税
+
+Version: 0.1
+Author: 喻先明
+"""
+salary=float(input("工资>:"))
+insurance=float(input("保险>:"))
+diff = salary-insurance-3500
+if diff <=0:
+    a=0
+    b=0
+elif diff<1500:
+    a=0.03
+    b=0
+elif diff<4500:
+    a=0.1
+    b=105
+elif diff<9000:
+    a=0.2
+    b=555
+elif diff<35000:
+    a=0.25
+    b=1005
+elif diff<55000:
+    a=0.3
+    b=2755
+elif diff<80000:
+    a=0.35
+    b=5505
+else:
+    a=0.45
+    b=13505
+
+print("个人所得税>:%.2f"%(diff*a-b))
+print("实际工资>:%.2f"%(salary-insurance-(diff*a-b)))
+
