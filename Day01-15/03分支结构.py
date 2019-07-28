@@ -242,3 +242,5 @@ else:
 print("个人所得税>:%.2f"%(diff*a-b))
 print("实际工资>:%.2f"%(salary-insurance-(diff*a-b)))
 
+a=yuxianming
+print(a)
