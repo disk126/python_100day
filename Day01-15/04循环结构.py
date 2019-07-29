@@ -60,23 +60,29 @@ for i in range(1,101):
 print(sum)
 """
 
-import random
-retun1=random.randint(1,100)
+import  random
+a=random.randint(1,10)
 count=0
 while True:
     count=count+1
-    if count>3:
-        print("你已经猜了%d次,强制退出循环!"%(count))
+    if count==4:
+        print("你已经猜测%d次,智商好低呀！是否还需要继续猜数字，是Y,否N....."%(count))
+        h=input("继续<Y>/结束<N>")
+        if h=="Y":
+            count=0
+            continue
+        elif h=="N":
+            print("结束猜数字游戏!")
+            break
+    b=int(input("请输入数字>:"))
+    if b>a:
+        print("数字在小一点！")
+    elif b<a:
+        print("数字在大一点！")
+    else:
+        b=a
+        print("数字猜对了！,非常棒.....")
         break
-    sr=int(input(">:"))
-    if sr>retun1:
-        print("小一点")
-    elif sr<retun1:
-        print("大一点")
-    elif sr==retun1:
-        print("猜对了!")
-        break
-
 
 
 

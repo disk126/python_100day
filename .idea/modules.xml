@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/python_100day.iml" filepath="$PROJECT_DIR$/.idea/python_100day.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python练习/.idea/python练习.iml" filepath="$PROJECT_DIR$/../python练习/.idea/python练习.iml" />
     </modules>
   </component>
 </project>
