@@ -17,3 +17,66 @@
 如果明确的知道循环执行的次数或者要对一个容器进行迭代（后面会讲到），那么我们推荐使用for-in循环
 ，例如下面代码中计算1~100求和的结果（$\displaystyle \sum \limits_{n=1}^{100}n$）。
 """
+
+
+#实现1-100之间的求和
+"""
+用for循环实现1~100求和
+
+Version: 0.1
+Author: 喻先明
+
+sum=0
+for i in range(1,101):
+    sum=sum+i
+print(sum)
+
+需要说明的是上面代码中的range类型，range可以用来产生一个不变的数值序列，而且这个序列通常都是用在循环中的，例如：
+
+range(101)可以产生一个0到100的整数序列。
+range(1, 100)可以产生一个1到99的整数序列。
+range(1, 100, 2)可以产生一个1到99的奇数序列，其中的2是步长，即数值序列的增量
+
+"""
+
+#代码来实现1~100之间的偶数求和
+"""
+用for循环实现1~100之间的偶数求和
+
+Version: 0.1
+Author: 喻先明
+
+sum=0
+for i in range(2,101,2):
+    sum+=i
+print(sum)
+"""
+#也可以通过在循环中使用分支结构的方式来实现相同的功能
+"""
+sum=0
+for i in range(1,101):
+    if i%2==0:
+        sum=sum+i
+print(sum)
+"""
+
+import random
+retun1=random.randint(1,100)
+count=0
+while True:
+    count=count+1
+    if count>3:
+        print("你已经猜了%d次,强制退出循环!"%(count))
+        break
+    sr=int(input(">:"))
+    if sr>retun1:
+        print("小一点")
+    elif sr<retun1:
+        print("大一点")
+    elif sr==retun1:
+        print("猜对了!")
+        break
+
+
+
+
