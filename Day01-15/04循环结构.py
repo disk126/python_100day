@@ -112,7 +112,9 @@ while True:
 """
 
 
-#九九乘法口诀
+#练习
+
+#练习1：九九乘法口诀
 
 """
 输出乘法口诀表(九九表)
@@ -120,9 +122,23 @@ while True:
 Version: 0.1
 Author: 喻先明
 Date: 2019-07-30
-"""
+
+
 
 for i in range(1,10):
     for j in range(1,i+1):
-        print(str(j) + str("*") + str(i)+"=" + str(i*j),end="\t")
+        print(str(i)+"x"+str(j)+"="+str(i*j),end=" ")
     print()
+"""
+
+#练习2：输入一个数判断是不是素数
+
+"""
+输入一个正整数判断它是不是素数
+
+Version: 0.1
+Author: 喻先明
+Date: 2019-08-03
+"""
+
+
