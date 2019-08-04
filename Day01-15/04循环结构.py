@@ -136,17 +136,44 @@ for i in range(1,10):
 Version: 0.1
 Author: 喻先明
 Date: 2019-08-03
-"""
-import math
 
-a = int(input("请输入一个正整数>:"))
-b = int(math.sqrt(a))
-c = True
-for i in range(2, b + 1):
-    if a % i == 0:
-        c = False
+import math
+a=int(input("请输入一个正整数>:"))
+b=int(math.sqrt(a))
+c=True
+for i in range(2,b+1):
+    if a%2==0:
+        c=False
         break
-if c and a != 1:
-    print("%d是一个素数" % (a))
+if c ==True and a!=1:
+    print("%d是一个素数"%(a))
 else:
-    print("%d不是一个素数" % (a))
+    print("%d不是一个素数"%(a))
+    
+"""
+
+#练习2：输入两个正整数，计算最大公约数和最小公倍数
+"""
+输入两个正整数计算最大公约数和最小公倍数
+
+Version: 0.1
+Author: 喻先明
+Date: 2019-08-04
+
+
+x=int(input("请输入一个正整数>:"))
+y=int(input("请输入一个正整数>:"))
+if x>y:
+    x,y=y,x
+for i in range(x,0,-1):
+    if x%i==0 and y%i==0:
+        print("数字%d和数字%d的最大公约数是:%d"%(x,y,i))
+        print("数字%d和数字%d的最小公倍数是:%d"%(x,y,x*y//i))
+
+"""
+
+a=int(input("请输入行数>:"))
+for i in range(a):
+    for i1 in range(0,i+1):
+        print("*",end="")
+    print("\n")
